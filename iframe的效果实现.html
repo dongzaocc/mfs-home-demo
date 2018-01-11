@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iframe的用法</title>
+    </head>
+    <style>
+            body{
+              margin: 0
+            }
+            *{
+              box-sizing: border-box
+            }
+            .left {
+              float: left;
+              width: 100px;
+            }
+            .left a{
+              display: block
+            }
+            .right {
+              float: left;
+              width: calc(100% - 102px);
+              height: 100vh
+            }
+          </style>
+    <body>
+        <div class="left">
+        <p>实现左边点击右边刷新效果</p>
+        <a href="https://www.mafengshe.com/" target="iframe">马蜂社官网</a>
+        <a href="http://bbs.mafengshe.com/"   target="iframe">码蜂论坛</a>
+        <a href="https://work.mafengshe.com/" target="iframe">作业系统</a>
+    </div>
+       <div class="right" >
+       <iframe src="http://www.w3school.com.cn/" frameborder="1" name="iframe" height="500" width="700"> w3school</iframe>
+    </div>
+    </body>
+ 
+</html>
