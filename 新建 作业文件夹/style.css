@@ -1,0 +1,19 @@
+
+body{
+  margin: 0
+}
+*{
+  box-sizing: border-box
+}
+.left {
+  float: left;
+  width: 100px;
+}
+.left a{
+  display: block
+}
+.right {
+  float: left;
+  width: calc(100% - 102px);
+  height: 100vh
+}
