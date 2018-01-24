@@ -1,0 +1,22 @@
+<style>
+*{
+    margin: 0;
+    padding: 1
+}
+.item{
+    position: relative;
+}
+.item:hover{
+    color: red
+}
+ul{
+    display: none;
+    list-item: none
+}
+.item:hover ul{
+    display: block;
+    position: absolute;
+    top: 16px;
+    left:0
+}
+</style>  
