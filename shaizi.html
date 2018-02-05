@@ -1,0 +1,98 @@
+<!DOCPYTE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       .box{
+           width: 550px;
+           height:550px;
+           background-color: black;
+           position: relative;
+           display: flex;
+           flex-wrap: wrap;
+       }
+       .item{
+           width: 150px;
+           height:150px;
+           background-color: rgb(250, 248, 248);
+           display: flex;
+           margin: 50px;
+           flex-wrap: wrap;
+           border: 3px solid rgb(204, 201, 201)
+       }
+       .b4{
+            background: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 40%;
+            margin-top: 40%;
+            
+       }
+       .b1,.b2{
+            background: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;    
+       }
+       .b1:nth-child(1){
+            margin-left: 15%;
+            margin: 10%;
+       }
+       .b1:nth-child(2){
+            margin-left: 35%;
+            margin-top: 70%;
+       }
+      .b2:nth-child(1){
+            margin-left: 10%;
+            margin: 10%;
+
+      }
+      .b2:nth-child(2){
+            margin-left: 5%;
+            margin-top: 40%;
+      }
+      .b2:nth-child(3){
+            margin-left: 5%;
+            margin-top: 70%;
+      }
+
+      .b3{
+           background: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 21px;
+
+      }
+       
+   </style>
+</head>
+<body>
+   <div class="box">
+   <div class="item">
+       <div class="b4"></div>
+   </div>
+   <div class="item">
+        <div class="b1"></div>
+        <div class="b1"></div>
+
+   </div>
+   <div class="item">
+        <div class="b2"></div>
+        <div class="b2"></div>
+        <div class="b2"></div>
+   </div>
+   <div class="item">
+        <div class="b3"></div>
+        <div class="b3"></div>
+        <div class="b3"></div>
+        <div class="b3"></div>
+   </div>
+</div>
+    
+</body>
+</html>
