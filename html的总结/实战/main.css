@@ -1,0 +1,22 @@
+.body{
+    margin:0;
+}
+.header{
+     background:rgb(202, 107, 39);
+      padding: 45px 0px 20px 0px;
+}
+.h1{
+   color: aliceblue;
+}
+.docs{
+   display: flex;
+}
+
+.main{
+    background: yellow;
+    height: 300px;
+}
+.footer{
+    background: black;
+    height: 200px;
+}
