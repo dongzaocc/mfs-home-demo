@@ -1,0 +1,329 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+}
+.header {
+    background: url(http://image.golaravel.com/5/c9/44e1c4e50d55159c65da6a41bc07e.jpg);
+    padding: 45px 0px 20px 0px;
+    background-origin: padding-box;
+    background-position-x: 35%;
+    background-position-y: 14%;
+}
+.header h1{
+    color:white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 45px;
+}
+
+.docs {
+    display:  flex;
+    justify-content: center;
+}
+
+.docs-a {
+    border: 1px solid rgb(240,56,49);
+    text-decoration: none;
+    color:white;
+    margin: 3px;
+    padding: 7px 13px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.docs-a:hover {
+    background: rgba(0,0,0,0.7);
+    transition:all 0.5s; 
+    border: 1px solid black;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #e1e1e1;
+}
+.link {
+    text-decoration: none;
+    font-size: 14px;
+    margin: 20px 22px; /*如果是自己做的话，也许用高度*/
+    color: #505050;
+}
+.link:hover {
+    color:red;
+}
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.main {
+    background: #ebebeb;
+    padding: 40px 0;
+
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-left {
+    height:1650px;
+    background: white;
+    width: 60%;  
+    padding: 20px 40px; 
+}
+.prelude {
+    text-align: center;
+}
+.title {
+    font-weight: 200;
+    color:#303030;
+    font-size: 29px;
+}
+.prelude span {
+    font-size: 14px;
+    color: #959595;
+}
+.prelude span a {
+    text-decoration: none;
+    color:red;
+}
+
+.img {
+    width: 100%;
+    margin: 20px 0;
+}
+.paragraph {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444443;
+}
+.button {
+    margin-top: 40px;
+    background-color: #f4645f;
+    text-decoration: none;
+    color:white;
+    padding: 7px 13px;
+    font-size: 14px;
+    border-radius: 2px;
+    border: 1px solid #f4645f;
+    position: relative;
+}
+
+.button:hover {
+    background: rgba(0,0,0,0.7);
+    transition:all 0.5s; 
+    border: 1px solid #000;
+    
+}
+/*.button-border {
+    border-bottom: 1px solid #ebebeb;
+    line-height: 100px;
+}*/
+
+.button-border:after { 
+    content: "";
+    display: block; 
+    width: 700px;
+    border-bottom: 1px solid #ebebeb;
+    position: absolute;
+    padding-top: 40px;
+
+}
+.button-border {
+    margin-top:40px;
+}
+
+.spacing {
+    border-top:2px solid #e1e1e1;
+    border-bottom:2px solid #e1e1e1;
+    height:40px;
+    width: 782px;
+    background: #ebebeb;
+    margin-left: -40px;
+    margin-top: 100px;
+}
+
+.section-right {
+    height: 820px;
+    background: white;
+    width: 25%;  
+    padding: 0px 30px; 
+}
+
+.region {
+    
+}
+.region-header {
+    color: #5c5959;
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 8px;
+    position: relative;
+}
+.region-header:after {
+    content: "";
+    display:block;
+    width: 60px;
+    border-bottom: 1px solid red;
+    position: absolute;
+    padding-top: 8px;
+}
+
+.region-a {
+    text-decoration: none;
+    color: red;
+
+}
+.region-a:hover{
+    border-bottom: 1px solid red;
+}
+.region-spacing{
+    border-top:2px solid #e1e1e1;
+    border-bottom:2px solid #e1e1e1;
+    height:30px;
+    width: 354px;
+    background: #ebebeb;
+    margin-left: -30px;
+    margin-top: 40px;
+}
+.guide {
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.region-guide {
+    text-decoration: none;
+    color:white;
+    background-color:  #f4645f;
+    border: 1px solid #f4645f;
+    padding: 7px 41px;
+    font-size: 14px;
+    border-radius: 2px;
+    
+}
+
+.region-guide:hover {
+    background: rgba(0,0,0,0.7);
+    transition:all 0.5s; 
+    border: 1px solid #000;}
+
+.region-guide-a {
+        text-decoration: none;
+        color:white;
+        background-color:  #f4645f;
+        border: 1px solid #f4645f;
+        padding: 7px 105px;
+        font-size: 14px;
+        border-radius: 2px;   
+    }
+.region-guide-a:hover {
+        background: rgba(0,0,0,0.7);
+        transition:all 0.5s; 
+        border: 1px solid #000;}
+.region-guide-b {
+        text-decoration: none;
+        color:white;
+        background-color:  #f4645f;
+        border: 1px solid #f4645f;
+        padding: 7px 92px;
+        font-size: 14px;
+        border-radius: 2px;   
+    }
+.region-guide-b:hover {
+        background: rgba(0,0,0,0.7);
+        transition:all 0.5s; 
+        border: 1px solid #000;}
+
+.tail {
+    height: 450px;
+    background: #202020;  
+}
+
+.tail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tail-a {
+    background: ;
+    width: 28%;
+    float: left;
+    margin: 18px;
+    padding: 0 14px;   
+    font-size: 14px;
+}
+
+
+.tail-par {
+    color: #4d4b4b;
+    line-height: 30px;
+    position: relative;
+    margin-top: 30px;
+}
+.tail-par:after {
+    content: "";
+    display: block; 
+    width: 350px;
+    border-bottom: 1px dashed #4d4b4b;
+    position: absolute;
+    padding-top: 13px;
+}
+.tail-link {
+    text-decoration: none;
+    color:#959595;
+}
+.tail-link:hover {
+    color: #f4645f;
+}
+
+
+.tail-link-a{
+    text-decoration: none;
+    color:#959595;
+    border:1px solid #4d4d4d;
+    padding:4px 8px;
+    position: absolute;
+    margin-top: 15px;
+}
+.tail-link-b {
+    text-decoration: none;
+    color:#959595;
+    padding-left: 35px;
+}
+
+.tail-link-b:hover {
+    border: 0 solid #f4645f;
+    background-color: #f4645f;
+    padding: 8px 1px;
+    margin-left: 33px;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(252, 2, 2, 0.7);
+    transition:all 0.2s;   
+}
+
+.mark {
+    height:40px;
+    background: black;
+    display: flex;
+    justify-content: center;padding-top: 2%;
+    color:#8d7474;
+    font-size: 12px;
+}
+.link-last {
+    text-decoration: none;
+    color:#8d7474;
+}
