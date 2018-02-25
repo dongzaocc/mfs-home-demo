@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .nav{
+            height: 40px;
+            max-width:100%;
+            background: yellow;
+            display: flex;
+            padding-left: 15%;
+            line-height: 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right:0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .nav-header{
+            width:550px;
+            display: flex;
+            padding-left: -25px;
+            justify-content: space-around;
+  
+        }
+        a:link{
+            list-style: none;
+            text-decoration: none;
+            /*color: black;*/
+        }
+
+        .choose{
+            position: relative;
+            padding-left: 4%;
+            padding-right: 4%; 
+           
+        }
+        ul {
+            display: none;
+            list-style: none;
+        }
+        .choose:hover ul {
+            width:100%;
+            display: block;
+            position: absolute;
+            font-size: 16px;
+            padding-top: 6px;
+            background: rgba(184, 247, 10, 0.6);
+            margin-left: -15px;
+            padding-left: 15px;
+        }
+
+
+
+
+        .turn {
+            margin-left: 20%;
+        }
+
+        .container {
+            background: rgb(143, 81, 132);
+            height:1300px;
+            margin: 100px 100px;
+            position: relative;
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img style="padding-top: 4px;float: left;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMzVweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzUgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM1IDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTkuMDc5LDI4LjM2MWMtMC40MDcsMC41ODUtMS4wODMsMC45NjctMS44NDksMC45NjdjLTAuNzY3LDAtMS40NDMtMC4zODQtMS44NS0wLjk2OGwxLjg1LDMuMjAzCgkJTDE5LjA3OSwyOC4zNjF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTIuNzI5LDYuNDc1YzAuMzA4LDAsMC41OTEtMC4xMDgsMC44MTMtMC4yODlsMC4wMDIsMC4wMDFjMS4wNjctMS4wMzEsMi40NzItMS42LDMuOTU2LTEuNgoJCWMxLjQ1NCwwLDIuODM1LDAuNTQ3LDMuODk0LDEuNTQybDAuMDA0LTAuMDAzYzAuMjI0LDAuMTg5LDAuNTE0LDAuMzAzLDAuODMxLDAuMzAzYzAuNzExLDAsMS4yODctMC41NzcsMS4yODctMS4yODkKCQljMC0wLjQzMi0wLjIxMy0wLjgxMy0wLjUzOC0xLjA0NmMtMC4zMzYtMC4yOTgtMC42OTEtMC41NjUtMS4wNjQtMC44MDFsMC42OTktMC43YzAuNDk5LTAuNDk4LDAuNDk5LTEuMzEsMC0xLjgwOAoJCWMtMC4yNDEtMC4yNDItMC41NjMtMC4zNzUtMC45MDMtMC4zNzVjLTAuMzQyLDAtMC42NjIsMC4xMzMtMC45MDQsMC4zNzVsLTEuNDQyLDEuNDQxYy0wLjYwNC0wLjEzOS0xLjIyOS0wLjIxMS0xLjg2My0wLjIxMQoJCWMtMC42NDYsMC0xLjI4MywwLjA3NS0xLjg5OCwwLjIxOWwtMS40NS0xLjQ1Yy0wLjI0Mi0wLjI0Mi0wLjU2My0wLjM3NS0wLjkwNC0wLjM3NXMtMC42NjMsMC4xMzMtMC45MDQsMC4zNzUKCQljLTAuNDk4LDAuNDk4LTAuNDk4LDEuMzEsMCwxLjgwOEwxMy4wNiwzLjMxYy0wLjM5NCwwLjI1Mi0wLjc3LDAuNTQtMS4xMjEsMC44NmMtMC4wNjIsMC4wNDgtMC4xMTgsMC4xMDEtMC4xNywwLjE1OQoJCWMtMC4wMDQsMC4wMDQtMC4wMDgsMC4wMDgtMC4wMTIsMC4wMTJoMGMtMC4xOTcsMC4yMjctMC4zMTcsMC41MjItMC4zMTcsMC44NDVDMTEuNDM5LDUuODk4LDEyLjAxNyw2LjQ3NSwxMi43MjksNi40NzV6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjUuNjUsMTEuMjk4Yy0wLjIxMS0wLjIxMi0wLjU1Ni0wLjIxMi0wLjc2NywwYy0wLjIxMSwwLjIxMS0wLjIxMSwwLjU1NSwwLDAuNzY3bDEuOTU2LDEuOTU2CgkJYzAuMjEyLDAuMjEyLDAuNTU1LDAuMjEyLDAuNzY3LDBzMC4yMTItMC41NTUsMC0wLjc2N0wyNS42NSwxMS4yOTh6Ii8+Cgk8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyOC4yMzciIGN5PSIxNC42NTEiIHI9IjAuNTQ1Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIuMDE1LDIzLjk5NWMtMC4yMTksMC0wLjQxMiwwLjExNS0wLjUxOSwwLjI4OGMtMS4xNjgsMS4wNjgtMi42NzcsMS42NTYtNC4yNjYsMS42NTYKCQljLTEuNjIzLDAtMy4xNjItMC42MTMtNC4zNC0xLjcyNWMtMC4xMDMtMC4xOTItMC4zMDUtMC4zMjItMC41MzgtMC4zMjJjLTAuMzM2LDAtMC42MDksMC4yNzItMC42MDksMC42MDkKCQljMCwwLjIzMiwwLjEzLDAuNDM1LDAuMzIyLDAuNTM3YzEuMzk5LDEuMzMyLDMuMjMyLDIuMDY2LDUuMTY1LDIuMDY2YzEuODc1LDAsMy42NTQtMC42OSw1LjAzOC0xLjk0NwoJCWMwLjIxLTAuMDk3LDAuMzU2LTAuMzA4LDAuMzU2LTAuNTU1QzIyLjYyNCwyNC4yNjcsMjIuMzUxLDIzLjk5NSwyMi4wMTUsMjMuOTk1eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTMzLjY1NCwxNS45MzZsLTAuMDE4LDAuMDE4QzMzLjY0MiwxNS45NDcsMzMuNjQ4LDE1Ljk0MSwzMy42NTQsMTUuOTM2eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTMzLjU4NCwxMy45NzhsMC4xMTMsMC4xMTRDMzMuNjYxLDE0LjA1MiwzMy42MjMsMTQuMDE0LDMzLjU4NCwxMy45Nzh6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuOTQ1LDIzLjIxbC0wLjI0MiwwLjI0M0MxMC43OTQsMjMuMzgzLDEwLjg3NSwyMy4zMDIsMTAuOTQ1LDIzLjIxeiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkuMDQxLDIzLjQ0OGwtMC4yMjMtMC4yMjJDOC44ODMsMjMuMzA5LDguOTU4LDIzLjM4Myw5LjA0MSwyMy40NDh6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQuMzY1LDIzLjY0OWwtMC4yODgtMC4yODdDMjQuMTU5LDIzLjQ3MiwyNC4yNTYsMjMuNTY5LDI0LjM2NSwyMy42NDl6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjYuMjExLDIzLjQxMmwtMC4xOTMsMC4xOTRDMjYuMDg5LDIzLjU0OCwyNi4xNTMsMjMuNDgyLDI2LjIxMSwyMy40MTJ6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuNjgxLDYuMjM0bDAuMTk3LDAuMTk2QzEwLjgxOSw2LjM1OCwxMC43NTMsNi4yOTMsMTAuNjgxLDYuMjM0eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIzLjkwNiw2LjQxbDAuMTY5LTAuMTY5QzI0LjAxNCw2LjI5MiwyMy45NTcsNi4zNDgsMjMuOTA2LDYuNDF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMzMuNjk3LDE0LjA5MmwtMC4xMTMtMC4xMTRsLTAuODcxLTAuODY2aC0wLjAwMmwtNi43MDYtNi42NzdjLTAuMDY1LTAuMDgzLTAuMTQyLTAuMTU4LTAuMjI1LTAuMjI0CgkJYy0wLjIyOS0wLjE4MS0wLjUyLTAuMjktMC44MzQtMC4yOWMtMC4zMzIsMC0wLjYzNiwwLjEyLTAuODcxLDAuMzE5TDIzLjkwNiw2LjQxTDkuODY1LDIwLjUxNGwtNS43LTUuNjc2bDUuNjY2LTUuNjg5bDQuNDk1LDIuNTg5CgkJaDEuODc3bC00LjQ5NS00LjQ3NmwwLjAwMi0wLjAwM0wxMC44NzgsNi40M2wtMC4xOTctMC4xOTZjLTAuMjMyLTAuMTg4LTAuNTI4LTAuMzAxLTAuODUtMC4zMDFjLTAuMzM1LDAtMC42NDEsMC4xMjMtMC44NzgsMC4zMjUKCQlMOC43OTksNi40MTNsLTcuNDIsNy40NTNsLTAuMDQ4LDAuMDQ5Yy0wLjIzLDAuMjQxLTAuMzcyLDAuNTY3LTAuMzcyLDAuOTI5YzAsMC4zNjIsMC4xNDQsMC42OTEsMC4zNzYsMC45MzRsMC4wNDIsMC4wNDIKCQlsMC45MSwwLjkwNWwwLTAuMDAxbDYuNTMsNi41MDNsMC4yMjMsMC4yMjJjMC4yMjksMC4xODEsMC41MTksMC4yODksMC44MzUsMC4yODljMC4zMTIsMCwwLjU5OC0wLjEwNSwwLjgyOC0wLjI4NGwwLjI0Mi0wLjI0MwoJCWwwLjgxMS0wLjgxM2wtMC4wMDYtMC4wMDZMMjQuOTQ2LDkuMTM2bDUuODg4LDUuODYxbC01LjY2Nyw1LjY5MmwtNC41MDMtMi42aC0xLjg3N2w0LjUwMyw0LjQ4M2wtMC4wMDIsMC4wMDNsMC43ODksMC43ODYKCQlsMC4yODgsMC4yODdjMC4yMjUsMC4xNjMsMC40OTgsMC4yNjIsMC43OTcsMC4yNjJjMC4zMjUsMCwwLjYyMy0wLjExNCwwLjg1NS0wLjMwNWwwLjE5My0wLjE5NGw3LjQyNi03LjQ1OWwwLjAxOC0wLjAxOAoJCWMwLjIzOC0wLjI0NCwwLjM4Ny0wLjU3OCwwLjM4Ny0wLjk0NUMzNC4wNDEsMTQuNjQ1LDMzLjkxLDE0LjMzLDMzLjY5NywxNC4wOTJ6Ii8+CjwvZz4KPC9zdmc+Cg==" width="30" height="28px;">
+       <div class="nav-header">
+        <span>
+            码蜂社
+        </span>
+        <a href="#">首页</a>
+        <span class="choose">
+            前端&全栈
+           <ul>
+                <li><a href="#">课程选择</a></li>
+                <li><a href="#">基础闯关班</a></li>
+                <li><a href="#">基础直播班</a></li>
+                <li><a href="#">Web闯关班</a></li>
+                <li><a href="#">Web直播班</a></li>
+           </ul>
+        </span>
+        <a href="#">TensorFlow</a>
+        <span class="choose">
+            社区
+                <ul>
+                    <li><a href="#">论坛</a></li>
+                    <li><a href="#">闯关任务</a></li>
+                </ul></span>
+        <a href="#">关于我们</a>
+       </div>
+        <div class="turn">
+        <a href="#">登录</a>
+        <a style="padding-left:25px;" href="#">注册</a>
+        </div>
+       
+    </div>
+
+    <div class="container">
+
+    </div>
+</body>
+</html>
