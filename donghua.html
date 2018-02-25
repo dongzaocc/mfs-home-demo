@@ -1,0 +1,162 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>动画</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+         @keyframes rotate-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes move-animation {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-64px, 0);
+            }
+            75% {
+                transform: translate(32px, 0);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        body {
+            background-color: rgb(100, 76, 76);
+        }
+
+        .box-loader {
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin-left: -32px;
+            margin-top: -32px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform-origin: 16px 16px;
+            animation: rotate-animation 5s linear infinite;
+        }
+
+        .box-loader .box {
+            animation: move-animation 2.5s linear infinite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        .box-loader .box-line {
+            width: 64px;
+            height: 24px;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            transform-origin: 4px 4px;
+        }
+
+        .box-loader .box-line:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .box-loader .box-line:nth-child(2) {
+            transform: rotate(90deg);
+        }
+
+        .box-loader .box-line:nth-child(3) {
+            transform: rotate(180deg);
+        }
+
+        .box-loader .box-line:nth-child(4) {
+            transform: rotate(270deg);
+        }
+
+        .box-loader .box-line .box:nth-child(1) {
+            width:6px;
+            height: 6px;
+            top: 50%;
+            left: 50%;
+            margin-top: -4px;
+            margin-left: -4px;
+            border-radius: 4px;
+            animation-delay: -0.5s;
+        }
+
+        .box-loader .box-line .box:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            margin-left: -8px;
+            border-radius: 8px;
+            animation-delay: -0.7s;
+        }
+
+        .box-loader .box-line .box:nth-child(3) {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-top: -12px;
+            margin-left: -12px;
+            border-radius: 10px;
+            animation-delay: -0.9s;
+        }
+
+        .box-loader .box-blue {
+            background-color: #318296;
+        }
+
+        .box-loader .box-red {
+            background-color: #ff8886;
+        }
+
+        .box-loader .box-yellow {
+            background-color: #db9d60;
+        }
+
+        .box-loader .box-green {
+            background-color: #218174;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+     <div class="box-loader">
+     <div class="box-line">
+     <div class="box box-blue"></div>
+     <div class="box box-blue"></div>
+     <div class="box box-blue"></div>
+    </div>
+     <div class="box-line">
+     <div class="box box-yellow"></div>
+     <div class="box box-yellow"></div>
+     <div class="box box-yellow"></div>
+   </div>
+     <div class="box-line">
+     <div class="box box-red"></div>
+     <div class="box box-red"></div>
+     <div class="box box-red"></div>
+ </div>
+    <div class="box-line">
+     <div class="box box-green"></div>
+     <div class="box box-green"></div>
+    <div class="box box-green"></div>
+ </div>
+</div>
+ </div>
+            
+    
+</body>
+</html>
